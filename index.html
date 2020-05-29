@@ -4,28 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TimeTracking</title>
-
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://kit.fontawesome.com/976a2adfcb.js" crossorigin="anonymous"></script>
+    <title>TimeTracking</title>
 </head>
 
 <body>
     <nav>
-        <div class="flex">
+        <div class="nav-flex">
             <h3>Time Tracker</h3>
             <span class="vertical-line">
             </span>
         </div>
     </nav>
     <header>
-        <div class="container">
-            <div class="flex-1">
+        <div class="head-container">
+            <div class="head-flex">
                 <div>
                     <h1>Easy Time Tracking. <br />Faster Billing.</h1>
                     <ul>
-                        <li>60 time tracks forever free - no <br />commitment and no credit card</li>
-                        <li>Seamless integration with our <br />invoices too!</li>
+                        <li><p>60 time tracks forever free - no <br />commitment and no credit card</p></li>
+                        <li><p>Seamless integration with our <br />invoices too!</p></li>
                     </ul>
                     <form>
                         <input type="email" placeholder="Email" /><br />
@@ -36,33 +37,130 @@
                     </form>
                     <p>By clicking 'Sign up' you're agreeing to our to our terms of Service and Privacy Policy.</p>
                 </div>
-                <div class="header-img">
+                <div class="head-img">
                     <img src="./images/main.png" class="main" alt="main" />
                 </div>
             </div>
         </div>
     </header>
-    <section>
-        <h2 class="section-heading">
-            What Customers Are Saying
-        </h2>
-        <div class="flex-2">
-            <div class="item-1">
-                <img src="./images/profile.png" class="profile" alt="profile-pic" />
-            </div>
-            <div class="item-2">
-                <h3>Ryan M.</h3>
-                <p>'I think it has the potential to profoundly impact a lot of small businesses, <br />
-                    startups,and tiny boutique businesses. I think the greatest value is coming from <br />
-                    the data showing me the invoice information.. and also, the ability to have the <br />
-                    projects, it really is very comprehensive [went back on her word] as a
-                </p>
-            </div>
+    <section class="slider-section">
+        <h1 class="section-heading">What Customers are Saying</h1>
+        <div class="slider-container">
+            <input type="radio" id="i1" name="images" checked/>
+                      <input type="radio" id="i2" name="images" />
+                      <input type="radio" id="i3" name="images" />
+          <div class="slide_card" id="one">
+              <div class="item-1">
+              <img src="./images/profile.png" alt="profile" width= 70%/>
+                  </div>
+                  <div class="item-2">
+              <h3 class="slide_head">Ryan M.</h3>
+                                  <p class="para">“I think it has the potential to profoundly impact a lot of small businesses, <br />startups,and tiny boutique businesses. I think the greatest value is coming from <br />the data showing me the invoice information.. and also, the ability to have the <br />projects, it really is very comprehensive [went back on her word] as a
+                                  </p>
+                                  </div>
+                                 <label for="i3" class="pre"></label> 
+                                 <label for="i2" class="nxt"></label>
+          </div>
+          <div class="slide_card" id="two">
+              <div class="item-1">
+              <img src="./images/profile.png" alt="profile" width = 70%/>
+              </div>
+              <div class="item-2">
+              <h3 class="slide_head">Brad Traversy.</h3>
+                                  <p class="para">“I think it has the potential to profoundly impact a lot of small businesses, <br />startups,and tiny boutique businesses. I think the greatest value is coming from <br />the data showing me the invoice information.. and also, the ability to have the <br />projects, it really is very comprehensive [went back on her word] as a 
+                                  </p>
+                                  </div>
+                                  <label for="i1" class="pre"></label>
+                                  <label for="i3" class="nxt"></label>
+                              </div>
+          <div class="slide_card" id="three">
+              <div class="item-1">
+              <img src="./images/profile.png" alt="profile" width=70%/>
+              </div>
+              <div class="item-2">
+                              <h3 class="slide_head">Elon Musk.</h3>
+                                  <p class="para">“I think it has the potential to profoundly impact a lot of small businesses, <br />startups,and tiny boutique businesses. I think the greatest value is coming from <br />the data showing me the invoice information.. and also, the ability to have the <br />projects, it really is very comprehensive [went back on her word] as a 
+                                  </p>
+                                  </div>
+                                  <label for="i2" class="pre"></label>
+                                  <label for="i1" class="nxt"></label> 
+                                  
+                                </div>
+                                <div class="slide_nav">
+                                    <label for="i1" class="dots" id="dot1"></label>
+                                    <label for="i2" class="dots" id="dot2"></label>
+                                    <label for="i3" class="dots" id="dot3"></label>
+                                </div>
+          
+      </div>
+    </section>
+    <section class="form-section">
+        <form id="msform">
+            <!-- progressbar -->
+            <ul id="progressbar">
+              <li class="active">Account Setup</li>
+              <li>Social Profiles</li>
+              <li>Personal Details</li>
+            </ul>
+            <!-- fieldsets -->
+            <fieldset>
+              <h2 class="fs-title">Create your account</h2>
+              <h3 class="fs-subtitle">This is step 1</h3>
+              <input type="text" name="email" placeholder="Email" />
+              <input type="password" name="pass" placeholder="Password" />
+              <input type="password" name="cpass" placeholder="Confirm Password" />
+              <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+              <h2 class="fs-title">Social Profiles</h2>
+              <h3 class="fs-subtitle">Your presence on the social network</h3>
+              <input type="text" name="twitter" placeholder="Twitter" />
+              <input type="text" name="facebook" placeholder="Facebook" />
+              <input type="text" name="gplus" placeholder="Google Plus" />
+              <input type="button" name="previous" class="previous action-button" value="Previous" />
+              <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+              <h2 class="fs-title">Personal Details</h2>
+              <h3 class="fs-subtitle">We will never sell it</h3>
+              <input type="text" name="fname" placeholder="First Name" />
+              <input type="text" name="lname" placeholder="Last Name" />
+              <input type="text" name="phone" placeholder="Phone" />
+              <textarea name="address" placeholder="Address"></textarea>
+              <input type="button" name="previous" class="previous action-button" value="Previous" />
+              <input type="submit" name="submit" class="submit action-button" value="Submit" />
+            </fieldset>
+          </form> 
+    </section>
+    <section id="tabs">
+        <div class="tabs-container">
+            <h6 class="section-title h1">Tabs</h6>
+                    <div class="row">
+                    <nav class="tabs-nav">
+                        <ul id="nav-tab">
+                            <li data-tab-target="#home" class="active tab">Home</li>
+                            <li data-tab-target="#profile" class="tab">Profile</li>
+                            <li data-tab-target="#contact" class="tab">Contact</li>
+                            <li data-tab-target="#about" class="tab">About</li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="tab-content">
+                        <div id="home" data-tab-content class="active">
+                            Home et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                        </div>
+                        <div id="profile" data-tab-content>
+                            Profile et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                        </div>
+                        <div id="contact" data-tab-content>
+                            Contact et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                        </div>
+                        <div id="about" data-tab-content>
+                            About et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                        </div>
+                </div>
+                    </div>
         </div>
-        <!-- Sorry. not able to find the free icon 
-            <div class=ïcon>
-                    <i class="fas fa-ellipsis-h "></i>
-                </div> -->
     </section>
 </body>
 
